@@ -15,6 +15,11 @@ class CourseService extends Service {
     return courseNameList.length > 0 ? courseNameList : authorList;
   }
 
+  async findByType(type) {
+    const { ctx } = this;
+    return await ctx.model.Course.find({ "type": type })
+  }
+
   async create(data) {
     const { ctx } = this;
     return await ctx.model.Course.create(data)

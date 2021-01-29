@@ -5,7 +5,10 @@ module.exports = app => {
   const Schema = mongoose.Schema;
 
   const CourseSchema = new Schema({
-    courseName: {
+    title: {
+      type: String
+    },
+    type: {
       type: String
     },
     imgUrl: {

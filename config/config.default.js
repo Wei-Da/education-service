@@ -19,6 +19,7 @@ module.exports = appInfo => {
   config.middleware = [];
 
   config.security = {
+    domainWhiteList: [ 'http://192.168.1.102:8080' ], // 前端网页托管的域名
     csrf: {
       enable: false
     }
