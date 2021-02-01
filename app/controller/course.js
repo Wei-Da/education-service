@@ -15,7 +15,7 @@ class CourseController extends Controller {
 
   async findByType() {
     const { ctx } = this;
-    ctx.body = await ctx.service.course.findByType(ctx.query.type);
+    ctx.body = await ctx.service.course.findByType(ctx.query);
   }
 
   async create() {
