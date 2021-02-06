@@ -5,7 +5,7 @@ const Controller = require('egg').Controller;
 class CourseController extends Controller {
   async index() {
     const { ctx } = this;
-    ctx.body = await ctx.service.course.findAll();
+    ctx.body = await ctx.service.course.findAll(ctx.query);
   }
 
   async findByName() {
